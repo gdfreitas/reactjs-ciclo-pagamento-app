@@ -2,6 +2,9 @@
 
 Construindo uma aplicação react integrada com redux para aprendizagem.
 
+## TODO dependencias 
+nome - função
+
 ## resources
 
 [Curso React Redux - Fundamentos @Udemy](https://www.udemy.com/react-redux-pt)
