@@ -19,7 +19,7 @@ class BillingCycleForm extends Component {
                <Field name="year" component={LabelInput} label="Ano" cols="12 4" placeholder="Informe o ano" readOnly={readOnly} />
             </div>
             <div className="box-footer">
-               <button type="submit" className="btn btn-primary">Salvar</button>
+               <button type="submit" className={`btn btn-${this.props.submitClass}`}>{this.props.submitLabel}</button>
                <button type="button" className="btn btn-default" onClick={this.props.init}>Cancelar</button>
             </div>
          </form>
