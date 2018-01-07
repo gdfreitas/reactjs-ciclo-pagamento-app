@@ -25,6 +25,10 @@ export function update(values) {
    return _submit(values, 'put')
 }
 
+export function remove(values) {
+   return _submit(values, 'delete')
+}
+
 function _submit(values, method) {
    return dispatch => {
       const id = values._id ? values._id : ''
@@ -45,6 +49,15 @@ export function showUpdate(billingCycle) {
    return [
       showTabs('tabUpdate'),
       selectTab('tabUpdate'),
+      initialize('billingCycleForm', billingCycle)
+   ]
+}
+
+// TODO: refatorar estas duas funções de show para uma showTab()
+export function showDelete(billingCycle) {
+   return [
+      showTabs('tabDelete'),
+      selectTab('tabDelete'),
       initialize('billingCycleForm', billingCycle)
    ]
 }
