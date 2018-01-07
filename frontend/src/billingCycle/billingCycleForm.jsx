@@ -13,7 +13,7 @@ class BillingCycleForm extends Component {
          <form role="form" onSubmit={handleSubmit}>
             <div className="box-body">
                <Field name="name" component={LabelInput} label="Nome" cols="12 4" placeholder="Informe o nome" />
-               <Field name="month" component={LabelInput} label="Mês"cols="12 4" placeholder="Informe o mês" />
+               <Field name="month" component={LabelInput} label="Mês" cols="12 4" placeholder="Informe o mês" />
                <Field name="year" component={LabelInput} label="Ano" cols="12 4" placeholder="Informe o ano" />
             </div>
             <div className="box-footer">
@@ -24,4 +24,4 @@ class BillingCycleForm extends Component {
    }
 }
 
-export default reduxForm({ form: 'billingCycleForm' })(BillingCycleForm)
+export default reduxForm({ form: 'billingCycleForm', destroyOnUnmount: false })(BillingCycleForm)
