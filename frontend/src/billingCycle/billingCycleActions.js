@@ -18,12 +18,21 @@ export function getList() {
 }
 
 export function create(values) {
+   return _submit(values, 'post')
+}
+
+export function update(values) {
+   return _submit(values, 'put')
+}
+
+function _submit(values, method) {
    return dispatch => {
-      axios.post(`${BASE_URL}/billingCycles`, values)
+      const id = values._id ? values._id : ''
+      axios[method](`${BASE_URL}/billingCycles/${id}`, values)
          .then(resp => {
             toastr.success('Sucesso!', 'Operação realizada com sucesso.')
             dispatch([
-               _showAndSelectTabs()
+               init()
             ])
          })
          .catch(e => {
@@ -41,7 +50,7 @@ export function showUpdate(billingCycle) {
 }
 
 export function init() {
-   return [ // TODO: refatorar exportar função para fazer este código abaixo, pode ser chamado no create
+   return [
       _showAndSelectTabs(null, 'tabList', 'tabList', 'tabCreate'),
       getList(),
    ]
