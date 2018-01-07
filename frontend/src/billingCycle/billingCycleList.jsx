@@ -12,10 +12,6 @@ class BillingCycleList extends Component {
 
    }
 
-   componentDidUpdate() {
-      console.log(this.props.list)
-   }
-
    renderRows() {
       const list = this.props.list || []
       return list.map(item => (

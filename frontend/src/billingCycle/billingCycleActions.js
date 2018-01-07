@@ -5,6 +5,10 @@ import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
 
+const INITIAL_VALUES = {
+
+}
+
 export function getList() {
    const request = axios.get(`${BASE_URL}/billingCycles`)
    return {
@@ -19,10 +23,7 @@ export function create(values) {
          .then(resp => {
             toastr.success('Sucesso!', 'Operação realizada com sucesso.')
             dispatch([
-               resetForm('billingCycleForm'),
-               getList(),
-               selectTab('tabList'),
-               showTabs('tabList', 'tabCreate')
+               _showAndSelectTabs()
             ])
          })
          .catch(e => {
@@ -36,5 +37,20 @@ export function showUpdate(billingCycle) {
       showTabs('tabUpdate'),
       selectTab('tabUpdate'),
       initialize('billingCycleForm', billingCycle)
+   ]
+}
+
+export function init() {
+   return [ // TODO: refatorar exportar função para fazer este código abaixo, pode ser chamado no create
+      _showAndSelectTabs(null, 'tabList', 'tabList', 'tabCreate'),
+      getList(),
+   ]
+}
+
+function _showAndSelectTabs(initializeData = INITIAL_VALUES, tabToSelect, ...tabsToShow) {
+   return [
+      initialize('billingCycleForm', initializeData),
+      selectTab(tabToSelect),
+      showTabs(...tabsToShow)
    ]
 }
