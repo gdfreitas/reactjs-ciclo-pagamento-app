@@ -5,9 +5,7 @@ import { showTabs, selectTab } from '../common/tab/tabActions'
 
 const BASE_URL = 'http://localhost:3003/api'
 
-const INITIAL_VALUES = {
-
-}
+const INITIAL_VALUES = {credits: [{}], debts: [{}]}
 
 export function getList() {
    const request = axios.get(`${BASE_URL}/billingCycles`)
@@ -46,33 +44,35 @@ function _submit(values, method) {
 }
 
 export function showUpdate(billingCycle) {
-   return [
-      showTabs('tabUpdate'),
-      selectTab('tabUpdate'),
-      initialize('billingCycleForm', billingCycle)
+   return [ 
+       showTabs('tabUpdate'),
+       selectTab('tabUpdate'),
+       initialize('billingCycleForm', billingCycle)
    ]
 }
 
-// TODO: refatorar estas duas funções de show para uma showTab()
 export function showDelete(billingCycle) {
-   return [
-      showTabs('tabDelete'),
-      selectTab('tabDelete'),
-      initialize('billingCycleForm', billingCycle)
+   return [ 
+       showTabs('tabDelete'),
+       selectTab('tabDelete'),
+       initialize('billingCycleForm', billingCycle)
    ]
 }
 
 export function init() {
    return [
-      _showAndSelectTabs(null, 'tabList', 'tabList', 'tabCreate'),
-      getList(),
+       showTabs('tabList', 'tabCreate'),
+       selectTab('tabList'),
+       getList(),
+       initialize('billingCycleForm', INITIAL_VALUES)
    ]
 }
 
-function _showAndSelectTabs(initializeData = INITIAL_VALUES, tabToSelect, ...tabsToShow) {
-   return [
-      initialize('billingCycleForm', initializeData),
-      selectTab(tabToSelect),
-      showTabs(...tabsToShow)
-   ]
-}
+// FIXME: refatorar os métodos acima devido ao bug do cancelar
+// function _showAndSelectTabs(initializeData = INITIAL_VALUES, tabToSelect, ...tabsToShow) {
+//    return [
+//       initialize('billingCycleForm', initializeData),
+//       selectTab(tabToSelect),
+//       showTabs(...tabsToShow)
+//    ]
+// }
