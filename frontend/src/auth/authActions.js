@@ -3,11 +3,11 @@ import axios from 'axios'
 import consts from '../consts'
 
 export function login(values) {
-   return submit(values, `${consts.OAPI_URL}/login`)
+   return _submit(values, `${consts.OAPI_URL}/login`)
 }
 
 export function signup(values) {
-   return submit(values, `${consts.OAPI_URL}/signup`)
+   return _submit(values, `${consts.OAPI_URL}/signup`)
 }
 
 export function logout() {
@@ -28,7 +28,7 @@ export function validateToken(token) {
    }
 }
 
-function submit(values, url) {
+function _submit(values, url) {
    return dispatch => {
       axios.post(url, values)
          .then(resp => {
