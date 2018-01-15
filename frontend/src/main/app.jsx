@@ -1,5 +1,3 @@
-import '../common/template/dependencies'
-
 import React from 'react'
 
 import Header from '../common/template/header'
@@ -14,7 +12,7 @@ export default props => (
       <Header />
       <SideBar />
       <div className="content-wrapper">
-         <Routes />
+         {props.children}
       </div>
       <Footer />
       <Messages />
