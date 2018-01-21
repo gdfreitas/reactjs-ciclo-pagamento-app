@@ -42,7 +42,7 @@ Recursos disponíveis para consulta, criação, alteração e remoção de ciclo
 
 ```
 module.exports = {
-  authSecret: 'skjdhf6$$%dojkhfˆ(sdkjhf'
+  authSecret: 'chaveSecretaMuitoLoucaCheiaDeCaracteresLerDocumentacao'
 }
 ```
 
