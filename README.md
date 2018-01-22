@@ -61,7 +61,7 @@ module.exports = {
 </html>
 ```
 
-# Dependências
+## Dependências
 
 [webpack](https://webpack.js.org/concepts/) - bundler de módulos estáticos para aplicações javascript. <br/>
 [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - servidor de desenvolvimento para ser utilizado em conjunto com webpack provendo live-reloading e muitas outras funcionalidades.<br/>
