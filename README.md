@@ -123,6 +123,13 @@ module.exports = {
 
 [Lodash](https://lodash.com/docs/) - biblioteca contendo inúmeros métodos que auxiliam na manipulação de arrays, objetos, strings, etc em javascript.
 
+# Rodando a aplicação
+`mongod` inicializar o banco de dados mongoDB
+
+`./backend npm run prod && pm2 monit` inicializar api de backend e abrir monitoração realtime do pm2
+
+`./frontend npm run prod` gerar os arquivos estáticos na pasta `./public` 
+
 # Extras
 
 [JsonWebToken implementation for node.js](https://github.com/auth0/node-jsonwebtoken)
