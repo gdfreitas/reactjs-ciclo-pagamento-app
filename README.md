@@ -65,6 +65,7 @@ module.exports = {
 
 [webpack](https://webpack.js.org/concepts/) - bundler de módulos estáticos para aplicações javascript. <br/>
 [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - servidor de desenvolvimento para ser utilizado em conjunto com webpack provendo live-reloading e muitas outras funcionalidades.<br/>
+[axios](https://github.com/axios/axios) - promise based HTTP client para browsers e NodeJS
 [react](https://reactjs.org/docs/) - biblioteca para criar interfaces, permite criar componentes através de sua árvore de múltiplos componentes reutilizáveis.<br />
 [react-dom](https://reactjs.org/docs/react-dom.html) - provê métodos para manipulação do DOM.<br />
 [react-router](https://reacttraining.com/react-router/web/guides/philosophy) - auxiliar para composição de rotas de aplicações react.<br />
