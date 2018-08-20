@@ -16,7 +16,7 @@ export default class DashboardNoRedux extends Component {
    }
 
    componentWillMount() {
-      axios.get(`${BASE_URL}/billingCycles/summary`)
+      axios.get(`${BASE_URL}/ciclos-pagamentos/summary`)
          .then(resp => this.setState(resp.data))
    }
 
