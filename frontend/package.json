@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --inline --hot",
-    "prod": "webpack --progress -p"
+    "production": "webpack --progress -p"
   },
   "keywords": [],
-  "author": "Gabriel de Freitas",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "admin-lte": "2.3.6",

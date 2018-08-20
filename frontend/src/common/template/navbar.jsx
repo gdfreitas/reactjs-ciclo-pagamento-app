@@ -28,7 +28,7 @@ class Navbar extends Component {
                      onClick={() => this.changeOpen()}
                      aria-expanded={this.state.open ? 'true' : 'false'}>
 
-                     <img src="http://lorempixel.com/160/160/abstract" className="user-image" alt="User Image" />
+                     <img src="http://loremflickr.com/160/160/abstract" className="user-image" alt="User Image" />
 
                      <span className="hidden-xs">{name}</span>
                   </a>
@@ -36,7 +36,7 @@ class Navbar extends Component {
                   <ul className="dropdown-menu">
 
                      <li className="user-header">
-                        <img src="http://lorempixel.com/160/160/abstract" className="img-circle" alt="User Image" />
+                        <img src="http://loremflickr.com/160/160/abstract" className="img-circle" alt="User Image" />
                         <p>{name}<small>{email}</small></p>
                      </li>
 
