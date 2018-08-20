@@ -4,7 +4,7 @@ const auth = require('./auth')
 // instância do server deve vir por parâmetro (server.js)
 module.exports = (server) => {
 
-    // ROTAS PROTEGIDAS
+    // ROTAS PROTEGIDAS por JWT
     const protectedApi = express.Router()
     server.use('/api', protectedApi)
     

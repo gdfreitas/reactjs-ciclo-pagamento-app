@@ -1,6 +1,6 @@
 const mongoose = require('mongoose') // responsavel por fazer conexao com o mongo e mapeamento dos nossos objetos para os documentos do mongo
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect('mongodb://localhost/mymoney') // caso tenha usuario senha //usuario:senha@localhost:port/
+module.exports = mongoose.connect('mongodb://localhost/mymoney', { useMongoClient: true }) // caso tenha usuario senha //usuario:senha@localhost:port/
 
 // Definir mensagens padrões de erros
 mongoose.Error.messages.Number.required = `O atributo '{PATH}' deve ser informado.` // neste caso o required, que por padrão está em inglês
