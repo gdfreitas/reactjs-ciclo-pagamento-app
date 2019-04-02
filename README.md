@@ -1,6 +1,6 @@
-# Aplicação react-redux
+# Ciclo de Pagamentos em React.js
 
-Construído uma aplicação frontend para interagir com uma api de ciclos de pagamentos. Praticando aprendizagem com as tecnologias do React, Redux, Webpack, entre outras.
+Construído uma aplicação frontend para interagir com uma API de Ciclos de Pagamentos utilizando tecnologias como React.js, Redux, webpack, entre outras.
 
 ## Requisitos
 
@@ -9,11 +9,6 @@ Possuir uma [Api de Ciclos de Pagamentos](https://github.com/gdfreitas/ciclo-pag
 ## Rodando aplicação
 
 `npm run prod` gerar os arquivos estáticos na pasta `./public`;
-
-## Variáveis de ambientes
-
-`"OAPI_URL"`: define o endereço da api pública. (padrão: `http://localhost/oapi`)  
-`"API_URL"`: define o endereço da api autenticada  (padrão: `http://localhost/api`)  
 
 ## Recursos utilizados
 
